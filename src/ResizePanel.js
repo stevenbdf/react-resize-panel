@@ -10,8 +10,7 @@ class ResizePanel extends React.Component {
   constructor(props) {
     super(props);
     this.state = { size: 0 };
-
-    this.contentRef = React.createRef();
+    Su    this.contentRef = props.contentRef || React.createRef();
     this.wrapperRef = React.createRef();
     this.validateSize = debounce(this.validateSize, 100).bind(this);
   }
